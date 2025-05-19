@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign Up Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header (unchanged) -->
+    <div class="header">
+        <div class="header-container">
+            <!-- NUmber and Email -->
+            <div class="header-left">
+                <span><i style="color: blueviolet;" class="fas fa-phone"></i> +2349037861164</span>
+                <span><i style="color: blueviolet;" class="fas fa-envelope"></i> contact@ditsacademy.com</span>
+            </div>
+            <!-- Social Media Icon -->
+            <div class="header-right">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <select class="language-select">
+                    <option value="english">English</option>
+                    <option value="igbo">Igbo</option>
+                    <option value="yoruba">Yoruba</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <!-- Logo -->
+        <div class="navbar-container">
+            <div class="navbar-left">
+                <img src="Logo.jpg" alt="Company Logo" class="logo">
+
+                <!-- Courses -->
+                <div class="dropdown">
+                    <button class="dropbtn"><i style="color: blueviolet;" class="fas fa-bars"></i> Courses <i class="fas fa-caret-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#"><i class="fas fa-chart-line"></i> Data Analytics</a>
+                        <a href="#"><i class="fas fa-paint-brush"></i> Graphic Design</a>
+                        <a href="#"><i class="fas fa-code"></i> Web Development</a>
+                        <a href="#"><i class="fas fa-shield-alt"></i> Cyber Security</a>
+                        <a href="#"><i class="fas fa-desktop"></i> UI/UX</a>
+                        <a href="#"><i class="fas fa-mobile-alt"></i> Mobile App Development</a>
+                        <a href="#"><i class="fas fa-laptop-code"></i> Web Development Pro</a>
+                        <a href="#"><i class="fas fa-users"></i> Social Media Management</a>
+                        <a href="#"><i class="fas fa-file-word"></i> Microsoft Office Essentials</a>
+                    </div>
+                </div>
+                <!-- Search Icon -->
+                <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
+            </div>
+            <div class="navbar-right">
+                <!-- Cart Icon -->
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i><span id="cart-count">0</span></a>
+                <!-- Login and Join -->
+                <a href="#" onclick="showForm('login')" class="nav-link">Login</a>
+                <a href="#" onclick="showForm('register')" class="nav-link">Join Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Body -->
+    <div class="body-content">
+        <div class="body-image">
+            <img src="Bodyimage.gif" alt="Body Image">
+        </div>
+        <!-- Form -->
+        <div class="form-container">
+            <h1 id="form-title">Log In<span style="color: blueviolet; font-size: 35px;">!</span></h1>
+            <p>Explore, learn, and grow with us. enjoy a seamless and enriching educational journey. lets begin!</p>
+            <form id="login-form" class="active">
+                <br><br>
+                <label>Your Email</label>
+                <br>
+                <div class="input-wrapper">
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="email" placeholder="Enter Your Email" required>
+                </div>
+                <label>Password</label>
+                <br>
+                <div class="input-wrapper">
+                    <i class="fas fa-key input-icon"></i>
+                    <input type="password" placeholder="Password" required> <i class="fas fa-eye input-icon-right"></i>
+                </div>
+                <a href="#" class="forgot-password">Forgot password?</a>
+                <div id="reCAPTCHA">
+                    <label for="robot">
+                        <input type="checkbox" name="check" id="robot">
+                        I'm not a robot
+                    </label>
+                    <img src="recaptcha.jpg" alt="reCAPTCHA-Logo">
+                </div>
+                <br><br>
+                <button type="submit">Login</button>
+                <br><br>
+                <div class="signup-prompt">
+                    <span class="no-account">Don’t have an account?</span>
+                    <a href="#" class="signup-link">Sign up</a>
+                </div>
+                <br>
+                <div class="or-divider">
+                    <hr class="divider-line">
+                    <span class="or-text">OR</span>
+                    <hr class="divider-line">
+                </div>
+            </form>
+            <form id="register-form">
+                <br><br>
+                <label>First Name</label>
+                <br>
+                <div class="input-wrapper">
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="text" placeholder="First Name" required>
+                </div>
+                <label>Last Name</label>
+                <br>
+                <div class="input-wrapper">
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+                <label>Email</label>
+                <br>
+                <div class="input-wrapper">
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <label>Password</label>
+                <br>
+                <div class="input-wrapper">
+                    <i class="fas fa-key input-icon"></i>
+                    <input type="password" placeholder="Password" required>
+                    <i class="fas fa-eye input-icon-right"></i>
+                </div>
+                <!-- <div id="reCAPTCH">
+                    <label for="robot">
+                        <input type="checkbox" name="check" id="robot">
+                        Apply to become an instructor
+                    </label>
+                    
+                </div> -->
+                <div id="reCAPTCHA">
+                    <label for="robot">
+                        <input type="checkbox" name="check" id="robot">
+                        I'm not a robot
+                    </label>
+                    <img src="recaptcha.jpg" alt="reCAPTCHA-Logo">
+                </div>
+                <br><br>
+                <button type="submit">Sign Up</button>
+                <br><br>
+                <div class="login-prompt">
+                    <span class="have-account">Already you have an account?</span>
+                    <a href="#" class="login-link">Log in</a>
+                </div>
+                <br>
+                <div class="or-divider">
+                    <hr class="divider-line">
+                    <span class="or-text">OR</span>
+                    <hr class="divider-line">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer (unchanged) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-category">
+                <img src="Logo.jpg" alt="Footer Logo">
+                <p>Study any topic, anytime. Explore thousands of courses at the lowest price ever!</p>
+                <div class="newsletter">
+                    <h2>Subscribe to our newsletter</h2>
+                    <div class="newsletter-input">
+                        <input type="email" placeholder="Enter your email address">
+                        <label class="newsletter-checkbox">
+                            <input type="checkbox">
+                            <i class="fas fa-arrow-right"></i>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-category">
+                <h2>Top categories</h2>
+                <a href="#">Excel</a><br>
+                <a href="#">Microsoft Office Automation Essentials (MOAE)</a>
+            </div>
+            <div class="footer-category">
+                <h2>Useful links</h2>
+                <ul>
+                    <li><a href="#">Become an instructor</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">All courses</a></li>
+                    <li><a href="#">Sign up</a></li>
+                </ul>
+            </div>
+            <div class="footer-category">
+                <h2>Help</h2>
+                <ul>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                    <li><a href="#">Terms and condition</a></li>
+                    <li><a href="#">Faq</a></li>
+                    <li><a href="#">Refund policy</a></li>
+                </ul>
+                <p class="footer-brand">Dits academy</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showForm(formType) {
+            document.getElementById('login-form').classList.remove('active');
+            document.getElementById('register-form').classList.remove('active');
+            document.getElementById(formType + '-form').classList.add('active');
+            
+            // Update the h1 title based on the form type
+            const formTitle = document.getElementById('form-title');
+            if (formType === 'login') {
+                formTitle.innerHTML = 'Sign In';
+            } else if (formType === 'register') {
+                formTitle.innerHTML = 'Sign Up';
+            }
+        }
+
+        let cartCount = 0;
+        const cartIcon = document.querySelector('.cart-icon');
+        const cartCountSpan = document.getElementById('cart-count');
+        cartIcon.addEventListener('click', () => {
+            cartCount++;
+            cartCountSpan.textContent = cartCount;
+        });
+    </script>
+</body>
+</html>
